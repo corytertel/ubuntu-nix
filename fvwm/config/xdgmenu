@@ -1,0 +1,70 @@
+DestroyMenu "xdgmenu"
+AddToMenu "xdgmenu"
++ "Accessories" Popup "Accessories"
++ "Development" Popup "Development"
++ "Graphics" Popup "Graphics"
++ "Multimedia" Popup "Multimedia"
++ "Network" Popup "Network"
++ "Office" Popup "Office"
++ "Settings" Popup "Settings"
++ "System" Popup "System"
+
+DestroyMenu "Accessories"
+AddToMenu "Accessories"
++ "Archive Manager" Exec file-roller 
++ "Calculator" Exec gnome-calculator
++ "Characters" Exec /usr/bin/gnome-characters
++ "Disks" Exec gnome-disks
++ "Files" Exec nautilus --new-window 
++ "Fonts" Exec gnome-font-viewer 
++ "Passwords and Keys" Exec seahorse
++ "Text Editor" Exec gedit 
++ "Vim%/usr/share/icons/hicolor/48x48/apps/gvim.png%" Exec /usr/bin/x-terminal-emulator -e vim 
++ "picom" Exec picom
+
+DestroyMenu "Development"
+AddToMenu "Development"
++ "Emacs%/home/cory/.nix-profile/share/icons/hicolor/24x24/apps/emacs.png%" Exec emacs 
++ "Emacs Client%/home/cory/.nix-profile/share/icons/hicolor/24x24/apps/emacs.png%" Exec /nix/store/zar37jpij1l0a63iwi6njx86pvqp305j-emacs-with-packages-28.2/bin/emacsclient -c 
+
+DestroyMenu "Graphics"
+AddToMenu "Graphics"
++ "Flameshot%/home/cory/.nix-profile/share/icons/hicolor/48x48/apps/org.flameshot.Flameshot.png%" Exec /nix/store/x2fv0lhi8l019lr3v23m99v7ny4hzzmq-flameshot-12.1.0/bin/flameshot
++ "Gwenview%/home/cory/.nix-profile/share/icons/hicolor/32x32/apps/gwenview.png%" Exec gwenview 
++ "Image Viewer" Exec eog 
+
+DestroyMenu "Multimedia"
+AddToMenu "Multimedia"
++ "PulseAudio System Tray%/home/cory/.nix-profile/share/pixmaps/pasystray.png%" Exec pasystray
++ "PulseAudio Volume Control%/usr/share/icons/Adwaita/24x24/legacy/multimedia-volume-control.png%" Exec pavucontrol
++ "Strawberry" Exec strawberry 
+
+DestroyMenu "Network"
+AddToMenu "Network"
++ "Discord" Exec Discord
++ "Firefox%/home/cory/.nix-profile/share/icons/hicolor/32x32/apps/firefox.png%" Exec firefox 
+
+DestroyMenu "Office"
+AddToMenu "Office"
++ "Document Viewer" Exec evince 
+
+DestroyMenu "Settings"
+AddToMenu "Settings"
++ "Additional Drivers" Exec /usr/bin/software-properties-gtk --open-tab=4
++ "Advanced Network Configuration" Exec nm-connection-editor
++ "IBus Preferences" Exec ibus-setup
++ "Language Support" Exec /usr/bin/gnome-language-selector
++ "Printers" Exec system-config-printer
++ "Software & Updates%/usr/share/icons/hicolor/24x24/apps/software-properties.png%" Exec software-properties-gtk
+
+DestroyMenu "System"
+AddToMenu "System"
++ "Dolphin%/usr/share/icons/Adwaita/24x24/legacy/system-file-manager.png%" Exec dolphin 
++ "Konsole" Exec konsole
++ "Logs" Exec gnome-logs
++ "Snap Store%/snap/snap-store/599/meta/gui/io.snapcraft.Store.png%" Exec env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/snap-store_snap-store.desktop /snap/bin/snap-store 
++ "Software Updater" Exec /usr/bin/update-manager
++ "System Monitor" Exec plasma-systemmonitor
++ "System Monitor" Exec gnome-system-monitor
++ "conky" Exec conky --daemonize --pause=1
+
